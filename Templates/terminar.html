@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<body background="{% static 'img\fondo3.jpg' %}">
+	<br><br><br><br>
+	<h1 class="colorLetras1 container">¡Gracias por tu apoyo!</h1> 
+	<br><br><br>
+	{% if 0 == request.session.max %}
+	<div class="container">
+		<div class="row">
+			<div class="col s4">
+				<div id="box-out">
+					<div id="box-inside">
+						<div id="circulo1" class="color1"></div>
+						<div id="circulo2" class="color2"></div>
+						<div id="circulo3" class="color3" style="
+						animation-name: parpadeo;
+						animation-duration: 1s;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col s8" id="terminar">
+				<h5>No cuentas con medidas de seguridad que brinden protección a tu información y datos personales, lo cual implica que estés más expuesto a una pérdida, robo, extravío o copia no autorizada de tus datos.
+				Como usuario desconoces cómo proteger los dispositivos y medios que usan o almacenan tu información personal.</h5>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% if 1 == request.session.max %}
+	<div class="container">
+		<div class="row">
+			<div class="col s4">
+				<div id="box-out">
+					<div id="box-inside">
+						<div id="circulo1" class="color1"></div>
+						<div id="circulo2" class="color2" style="
+						animation-name: parpadeo;
+						animation-duration: 1s;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;"></div>
+						<div id="circulo3" class="color3"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col s8" id="terminar">
+				<h5>Cuentas con algunas medidas de seguridad que brindan un nivel de protección básico a tu información y datos personales.
+					Eres un usuario que conoce sobre la importancia de proteger tu información personal, pero que necesita generar una mayor conciencia.
+				Aunque cuentas con mecanismos para tu protección es recomendable que acutalices o fortalezcas las medidas con las que acutalmente protreges tus datos personales.</h5>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	{% if 2 == request.session.max %}
+	<div class="container">
+		<div class="row">
+			<div class="col s4">	
+				<div id="box-out">
+					<div id="box-inside">
+						<div id="circulo1" class="color1" style="
+						animation-name: parpadeo;
+						animation-duration: 1s;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;"></div>
+						<div id="circulo2" class="color2"></div>
+						<div id="circulo3" class="color3"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col s8" id="terminar">
+				<h5>Las medidas de seugirad que actualmente tienes implementads protegen de forma adecuada tu información y/o datos personales.
+				Eres un usuario consciente de la importancia de mantener protegidos todos los dispositivos y medios que empleas en tu vida diaria y tomas con seriedad el cuidado de tus datos personales.</h5>
+			</div>
+		</div>
+	</div>
+	{% endif %}
+	<br><br><br>
+	<main class="container">
+		<form method="post">
+			{% csrf_token %}
+			{{ form.non_field_errors }}
+			<div class="row" id="cuestionario2">
+				{% for field in form.visible_fields %}
+				<div class="col s10" id="cuestionario2">
+					<div class="card" id="cuestionario2">
+						<div class="fieldWrapper col s10" id="cuestionario2">
+							<h6>{{ field.label }}</h6>
+							<h6>Respuesta:</h6>
+							<h6>{{ field.help_text }}</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col s2"></div>
+				<br><br><br><br><br><br>
+				{% endfor %}
+			</div>
+		</form>
+		<br><br><br>
+	</main>
+	<br><br><br><br><br><br><br><br><br>
+</div>
+<br></br>
+<br></br>    
+</body>
+{% endblock %}

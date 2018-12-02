@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<body background="{% static 'img/a.png' %}">
+  <div class = "container">  
+  	<nav>
+      <div class="nav-wrapper fondoFooter">
+        <a href="#" class="brand-logo center">Datos</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        </ul>
+      </div>
+    </nav>
+    <br>
+  <form method="POST">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="fieldWrapper col s6">
+          <h5 for="{{ form.Nombre.id_for_label }}">Nombre:</h5>
+          {{ form.Nombre }}
+        </div>
+        <div class="fieldWrapper col s6">
+          <h5 for="{{ form.Ap_Paterno.id_for_label }}">Apellido Paterno:</h5>
+          {{ form.Ap_Paterno }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="fieldWrapper col s6">
+          <h5 for="{{ form.Ap_Materno.id_for_label }}">Apellido Materno:</h5>
+          {{ form.Ap_Materno }}
+        </div>
+        <div class="fieldWrapper col s6">
+          <h5 for="{{ form.Edad.id_for_label }}">Edad:</h5>
+          {{ form.Edad }}
+        </div>
+      </div>
+        <div class="row">
+          <div class="fieldWrapper col s6">
+            <h5 for="{{ form.Correo.id_for_label }}">Correo:</h5>
+            {{ form.Correo }}
+          </div>
+          <div class="fieldWrapper col s6">
+            <h5 for="{{ form.Genero.id_for_label }}">Genero:</h5>
+            {{ form.Genero }}
+          </div>
+        </div>
+        <div align="center">
+          <button class="waves-effect waves-light btn-small">Enviar Datos</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br><br>
+</body>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
+
+{% endblock %}

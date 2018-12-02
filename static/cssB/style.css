@@ -1,0 +1,146 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background-color: #f2f2f2;
+	font-family: 'Quicksand', sans-serif;
+}
+header {
+	background-image: url(../img/bg-head.jpg);
+	font-family: 'Montserrat', sans-serif;
+}
+.ggg{
+	background-color:#939393;
+}
+.facultad {
+	width: 78%;
+}
+.rojo {
+	color: #F61D1D;
+}
+.underline {
+	text-decoration: underline;
+}
+nav {
+	padding-top: 1px;
+	font-size: 20px;
+	background-color: #B0ABAB;
+	font-family: 'Quicksand', sans-serif;
+}
+main h2 {
+	margin-bottom: 30px;
+}
+main p {
+	font-size: 25px;
+	line-height: 40px;
+}
+.min {
+	font-size: 12px;
+}
+.img-unam {
+	/* The image used */
+	background-image: url("../img/unam_noche.jpg");
+
+	/* Set a specific height */
+	height: 400px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.img-video {
+	/* The image used */
+	background-image: url("../img/biblio.jpg");
+
+	/* Set a specific height */
+	height: 200px;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.title {
+	text-align: center;
+	margin-top: 20px;
+}
+.title::after {
+	content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+}
+.texto {
+	font-size: 20px;
+	text-align: justify;
+	color: black;
+}
+.carousel-inner img {
+	width: 75%;
+}
+video {
+	width: 75%;
+}
+@media (min-width: 400px) {
+	.biblio .card-header {
+		width: 200px;
+	}
+}
+.card {
+	font-family: 'Chakra Petch', sans-serif;
+}
+.img-pregunta {
+	width: 60%;
+	margin: 10px auto;
+	display: block;
+}
+.card-header {
+	padding-top: 20px; 
+	font-size: 20px;
+	color: #ffffff;
+}
+.card-title {
+	margin-top: 25px;
+	font-family: 'Quicksand', sans-serif;
+	text-decoration: underline;
+}
+.card-text {
+	font-size: 20px;
+	margin: 0px;
+	font-family: 'Quicksand', sans-serif;
+}
+@media (max-width: 767px) {
+	.card-body .row div:nth-child(2) {
+		margin-top: 16px;
+	}
+}
+.modal {
+	color: white;
+}
+.modal p {
+	font-size: 20px;
+}
+.calificacion {
+	font-size: 25px;
+}
+.modal-title {
+	text-align: center;
+}
+footer {
+	height: 100px;
+	background-color: #B0ABAB;
+	font-family: 'Montserrat', sans-serif;
+}
+footer .row {
+	height: 100px;
+}
+footer img {
+	width: 100%;
+	height: auto;
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+<body background="{% static 'img\fondo4.jpg'%}">
+  <div class = "container">
+    <justify>
+      <center>
+        <h1 class= "colorLetras3">Introducción</h1>
+        <p class ="colorLetras2">Este cuestionario consta de 10 preguntas que serán seleccionadas aleatoriamente de una base de 20.Éste proyecto fue realizado por las alumnas y alumnos de la Facultad de Ingeniería con el fin de poder dar generar un diagnóstico de medidas de seguridad a los usuarios que lo respondan. Sus resultados serán mostrados a través de un semáforo.</p>
+      </center>
+      <p></p>
+      <center>
+        <h1 class ="colorLetras3">Objetivo</h1>
+        <p class ="colorLetras2">El usuario con base en el diagnóstico obtenido, podrá hacer conciencia de sus medidas de seguridad y así podrá realizar los cambios en sus hábitos para evitar poner en riesgo su información.</p>
+        <a class="waves-effect waves-light btn-small" href="{% url 'datos' %}">Siguiente</a>
+        <br>
+        <br>
+      </center>
+    </justify>
+  </div>
+</body>
+
+{% endblock %}
